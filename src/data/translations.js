@@ -1,0 +1,98 @@
+export const translations = {
+  pt: {
+    navLink: {
+      1: "Início",
+      2: "Sobre",
+      3: "Portfólio",
+      4: "Experiência",
+      5: "Contato",
+    },
+    hero: {
+      title: "Eu sou a Raiana Fernandez,",
+      subtitle: "Designer Gráfica &",
+      subtitleBlue: "Desenvolvedora Full-Stack.",
+      description:
+        "Desenvolvedora Full-Stack e Designer UX/UI com mais de 10 anos de experiência profissional, focada em transformar ideias em soluções digitais esteticamente agradáveis e funcionais, usando React para interfaces dinâmicas e PHP/MySQL para backends robustos e escaláveis. Minha paixão reside em criar experiências de usuário intuitivas, aplicando padrões de código limpo e técnicas avançadas como Framer Motion para interações web de alto impacto.",
+      experience: "+10 Anos de Experiência",
+      button: "FALE COMIGO",
+    },
+    skills: {
+      titlel1: "EM QUE POSSO",
+      titlel2: "TE AJUDAR",
+      PHP: "PHP OOP",
+      DataInt: "Integração de Dados",
+      cta: "Tem uma ideia para um projeto incrível?",
+      button: "VAMOS CRIAR!",
+    },
+    coreSkills: {
+      title: "Meus pontos fortes",
+      features: [
+        "Auto-Didata",
+        "Resolução de Problemas",
+        "Gerenciamento de Tempo",
+        "Tecnológica",
+        "Adaptabilidade",
+        "Inteligência Emocional",
+        "Empatia",
+      ],
+    },
+    Portfolio: {
+      title: "De Uma Olhada No Meu",
+      titleBlue: "Portifólio",
+      subtitle1: "Desenvolvimento",
+      subtitle2: "Design",
+    },
+    Experience: {
+      title: "Experiências",
+      titleBlue: "Profissionais",
+    },
+  },
+  en: {
+    navLink: {
+      1: "Home",
+      2: "About",
+      3: "Portfolio",
+      4: "Experience",
+      5: "Contact",
+    },
+    hero: {
+      title: "I'm Raiana Fernandez,",
+      subtitle: "Graphic Designer &",
+      subtitleBlue: "Full-Stack Developer.",
+      description:
+        "Full-Stack Developer and UI/UX Designer with over 10 years of professional experience, focused on transforming ideas into functional and aesthetically pleasing digital solutions, leveraging React for dynamic interfaces and PHP/MySQL for robust, scalable backends. My passion lies in creating intuitive user experiences (UX/UI), applying clean code standards, and utilizing advanced techniques for high-impact web interactions.",
+      experience: "+10 Years Experience",
+      button: "HIRE ME",
+    },
+    skills: {
+      titlel1: "WHAT I CAN",
+      titlel2: "OFFER TO YOU",
+      PHP: "PHP OOP",
+      DataInt: "Data Integration",
+      cta: "Have an idea for an amazing project?",
+      button: "LETS DO IT!",
+    },
+    coreSkills: {
+      title: "My best features",
+      features: [
+        "Self-Taught",
+        "Problem-Solving",
+        "Time Management",
+        "Digital Literacy",
+        "Adaptability",
+        "Emotional Intelligence",
+        "Empathy",
+      ],
+    },
+    Portfolio: {
+      title: "Take a Look At My",
+      titleBlue: "Portfolio",
+      subtitle1: "Developing",
+      subtitle2: "Design",
+    },
+    Experience: {
+      title: "Working",
+      titleBlue: "Experience",
+    },
+  },
+};
