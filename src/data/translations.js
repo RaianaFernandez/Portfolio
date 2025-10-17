@@ -1,8 +1,8 @@
 export const translations = {
   pt: {
     navLink: {
-      1: "Início",
-      2: "Sobre",
+      1: "Sobre",
+      2: "Habilidades",
       3: "Portfólio",
       4: "Experiência",
       5: "Contato",
@@ -46,11 +46,21 @@ export const translations = {
       title: "Experiências",
       titleBlue: "Profissionais",
     },
+    Project: {
+      subtitle1: "Meu Papel",
+      subtitle2: "Ferramentas",
+      linkText: "Acessar Site",
+      githubText: "Ver o Código",
+      figmaText: "Ver o Protótipo",
+      paragraph1: "Objetivo",
+      paragraph2: "Processo e Desenvolvimento",
+      paragraph3: "Desafios e Aprendizados",
+    },
   },
   en: {
     navLink: {
-      1: "Home",
-      2: "About",
+      1: "About",
+      2: "Skills",
       3: "Portfolio",
       4: "Experience",
       5: "Contact",
@@ -93,6 +103,16 @@ export const translations = {
     Experience: {
       title: "Working",
       titleBlue: "Experience",
+    },
+    Project: {
+      subtitle1: "My Role",
+      subtitle2: "Tools",
+      linkText: "Access Site",
+      gitHubText: "View Code",
+      figmaText: "View Prototype",
+      paragraph1: "Objective",
+      paragraph2: "Process and Development",
+      paragraph3: "Challenges and Learning",
     },
   },
 };

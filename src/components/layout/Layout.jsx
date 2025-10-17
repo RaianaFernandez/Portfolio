@@ -1,11 +1,15 @@
-import Footer from "./footer";
-function Layout({ children }) {
+import { Outlet } from "react-router-dom";
+import Header from "./Header";
+import Footer from "./Footer";
+
+function Layout() {
   return (
-    // Aplica o fundo escuro (dark-bg) e garante que ocupe a tela inteira (min-h-screen)
-    <div className="bg-dark-bg text-white min-h-screen">
-      <main>{children}</main>
+    <>
+      <main>
+        <Outlet />
+      </main>
       <Footer />
-    </div>
+    </>
   );
 }
 

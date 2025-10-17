@@ -1,5 +1,5 @@
-import { useContext } from "react";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { projectsData } from "../../data/projectsData.jsx";
 import ProjectCard from "../ui/ProjectCard.jsx";
 import DesignPortfolio from "../ui/DesignPortfolio.jsx";
@@ -9,10 +9,14 @@ import { LanguageContext } from "../../context/LanguageContext";
 function Portfolio() {
   const { translations, language } = useContext(LanguageContext);
   const [activeTab, setActiveTab] = useState("developing");
+  const location = useLocation();
   const PortCards = projectsData.filter((p) => p.category === "portfolio");
 
   return (
-    <section className="relative z-30 bg-dark-bg flex flex-col gap-4 min-h-[650px]">
+    <section
+      id="portfolio"
+      className="relative z-30 bg-dark-bg flex flex-col gap-4 min-h-[650px]"
+    >
       <h1 className=" p-4 sm:p-6 lg:p-8 font-medium text-3xl">
         {translations[language].Portfolio["title"]}
         <span className="text-neon-blue">
@@ -39,13 +43,22 @@ function Portfolio() {
         {activeTab === "developing" && (
           <Carousel>
             {PortCards.map((card) => (
-              <ProjectCard
+              <Link
+                // A 'key' agora vai para o elemento mais externo
                 key={card.id}
-                title={card.title[language]}
-                subtitle={card.subtitle[language]}
-                image={card.img}
-                tools={card.tools[language]}
-              />
+                // O 'to' define o URL para onde vamos navegar
+                to={`/project/${card.slug}`}
+                // O 'state' é a "magia" que diz ao App.jsx para abrir como um modal
+                state={{ background: location }}
+              >
+                <ProjectCard
+                  key={card.id}
+                  title={card.title[language]}
+                  subtitle={card.subtitle[language]}
+                  image={card.img}
+                  tools={card.tools[language]}
+                />
+              </Link>
             ))}
           </Carousel>
         )}

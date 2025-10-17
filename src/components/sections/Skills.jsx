@@ -10,7 +10,10 @@ import { motion } from "framer-motion";
 function Skills() {
   const { translations, language } = useContext(LanguageContext);
   return (
-    <motion.section className="relative z-30 py-10 bg-dark-bg-2 w-full min-h-screen flex flex-col overflow-hidden px-5 sm:px-6 lg:px-8 wrap gap-10">
+    <motion.section
+      id="skills"
+      className="relative z-30 py-10 bg-dark-bg-2 w-full min-h-screen flex flex-col overflow-hidden px-5 sm:px-6 lg:px-8 wrap gap-10"
+    >
       <div className=" w-full flex justify-between items-center">
         <div className="w-1/2 flex align-center gap-15">
           <div className="relative flex flex-col justify-center items-center">
@@ -37,8 +40,8 @@ function Skills() {
             text={translations[language].skills["button"]}
             px="px-6"
             fontSize="text-1xl"
-            href="#contact"
-          ></BlueButton>
+            href="http://wa.me/5548988287957"
+          />
         </div>
       </div>
       <div className="w-full flex">

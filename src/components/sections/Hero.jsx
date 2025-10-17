@@ -15,10 +15,10 @@ function Hero() {
       <motion.div className="w-full min-h-screen flex flex-col overflow-hidden px-4 sm:px-6 lg:px-8">
         <Header />
         <div className="grow w-full flex justify-between items-stretch relative group">
-          <div className="flex flex-col justify-center items-start gap-10 pl-10 z-10">
+          <div className="flex flex-col justify-center items-start gap-10 pl-10 z-30">
             {/*container do texto alternado*/}
             <div className="relative w-full max-w-[600px] min-h-[150px] flex items-center">
-              <div className="absolute w-full group-hover:opacity-0 p-2 bg-dark-40 rounded-lg transition-opacity duration-500">
+              <div className="absolute w-full group-hover:opacity-0 p-2 bg-dark-40 rounded-lg transition-opacity duration-500 ">
                 {/*container do titulo*/}
                 <h1 className="font-light text-4xl">
                   {translations[language].hero["title"]}
@@ -44,7 +44,7 @@ function Hero() {
               text={translations[language].hero["button"]}
               px="px-10"
               fontSize="text-3xl"
-              href="#contact"
+              href="http://wa.me/5548988287957"
             />
           </div>
           <div className="absolute grow w-full flex items-end justify-center inset-0">

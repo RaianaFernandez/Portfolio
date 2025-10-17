@@ -10,7 +10,10 @@ function Experience() {
   const jobHistory = projectsData.filter((p) => p.category === "jobs");
 
   return (
-    <section className="relative z-30 p-4 sm:p-6 lg:px-8 lg:py-12 w-full min-h-screen bg-dark-bg-2 flex flex-col gap-20">
+    <section
+      id="experience"
+      className="relative z-30 p-4 sm:p-6 lg:px-8 lg:py-12 w-full min-h-screen bg-dark-bg-2 flex flex-col gap-20"
+    >
       <div className="w-full flex gap-6 justify-center sm:justify-end items-center flex-wrap">
         <h2 className="text-4xl font-semibold flex gap-2">
           {translations[language].Experience["title"]}
