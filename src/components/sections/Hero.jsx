@@ -70,6 +70,7 @@ function Hero() {
               z-20
               absolute
               h-full
+              sm:h-auto
               sm:w-[500px]      
               sm:min-w-[500px]
               mx-[70px]
@@ -81,7 +82,8 @@ function Hero() {
               className="
               z-10
               absolute
-              h-full      
+              h-full
+              sm:h-auto      
               sm:w-[640px]
               sm:min-w-[640px]
               -bottom-[0%]
@@ -98,6 +100,7 @@ function Hero() {
               absolute      
               aspect-square
               h-full
+              sm:h-auto
               sm:w-[640px]
               -bottom-[30%]
               sm:right-0

@@ -22,7 +22,7 @@ export const translations = {
       PHP: "PHP OOP",
       DataInt: "Integração de Dados",
       cta: "Tem uma ideia para um projeto incrível?",
-      button: "VAMOS CRIAR!",
+      button: "VAMOS LÁ!",
     },
     coreSkills: {
       title: "Meus pontos fortes",
