@@ -23,7 +23,7 @@ function CoreSkills() {
       before:opacity-30"
       >
         {features.map((feature, index) => (
-          <li key={index} className="relative pl-8">
+          <li key={index} className="relative pl-8 py-2 sm:py-0">
             {/* O Círculo */}
             <span className="absolute left-0 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-neon-blue"></span>
             {/* O Texto */}

@@ -15,37 +15,38 @@ function Skills() {
       className="relative z-30 py-10 bg-dark-bg-2 w-full min-h-screen flex flex-col overflow-hidden px-5 sm:px-6 lg:px-8 wrap gap-10"
     >
       <div className=" w-full flex justify-between items-center">
-        <div className="w-1/2 flex align-center gap-15">
-          <div className="relative flex flex-col justify-center items-center">
-            <span className="writing-rl text-xl font-light pb-12">
-              SCROLL DOWN
-            </span>
-            <FaArrowDownLong
-              className="
+        <div className="relative flex flex-col justify-center items-center">
+          <span className="writing-rl text-xl font-light pb-12">
+            SCROLL DOWN
+          </span>
+          <FaArrowDownLong
+            className="
               absolute
               bottom-0
               text-neon-blue 
               text-3xl
               animate-pulse-vertical"
-            />
-          </div>
-          <h1 className="text-neon-blue font-semibold text-[3.5rem]/12 flex flex-col justify-center tracking-tight">
+          />
+          {/*srcoll down + arrow */}
+        </div>
+        <div className="text-white font-light text-base w-[calc(100%_-_40px)] flex flex-col sm:flex-row justify-between items-center">
+          <h1 className="w-full sm:w-1/2 text-neon-blue font-semibold text-[3.5rem]/12 flex flex-col text-right sm:text-left justify-center tracking-tight">
             {translations[language].skills["titlel1"]} <br />
             {translations[language].skills["titlel2"]}
           </h1>
-        </div>
-        <div className="text-white font-light text-base w-1/2 text-right">
-          {translations[language].skills["cta"]} &nbsp;&nbsp;&nbsp;
-          <BlueButton
-            text={translations[language].skills["button"]}
-            px="px-6"
-            fontSize="text-1xl"
-            href="http://wa.me/5548988287957"
-          />
+          <div className="text-right w-full sm:w-1/2 flex flex-col sm:flex-row items-end sm:items-center justify-end gap-2 flex-wrap">
+            {translations[language].skills["cta"]} &nbsp;&nbsp;&nbsp;
+            <BlueButton
+              text={translations[language].skills["button"]}
+              px="px-6"
+              fontSize="text-1xl"
+              href="http://wa.me/5548988287957"
+            />
+          </div>
         </div>
       </div>
-      <div className="w-full flex">
-        <div className="flex w-2/3 flex-wrap gap-6">
+      <div className="w-full flex flex-col items-center sm:items-stretch sm:flex-row flex-wrap">
+        <div className="min-w-[500px] flex w-2/3 flex-wrap gap-3 sm:gap-6 mb-10 sm:mb-0">
           {skillsData.map((card) => (
             <SkillsCard
               key={card.id}
@@ -54,7 +55,7 @@ function Skills() {
             />
           ))}
         </div>
-        <div className="w-1/3 pl-12">
+        <div className="lg:w-1/3 pl-12 min-w-[250px]">
           <CoreSkills />
         </div>
       </div>

@@ -10,7 +10,7 @@ function Header() {
   return (
     <div className="w-full flex justify-between items-center">
       <img className="w-[70px]" src={logo} alt="Raiana Fernandez" />
-      <nav className="text-sm font-medium flex justify-start gap-10">
+      <nav className="text-sm font-medium flex justify-start gap-4 lg:gap-10 sm:gap-6">
         <a
           href="#about"
           className="relative 

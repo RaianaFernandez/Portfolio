@@ -40,7 +40,7 @@ export const projectsData = [
     },
     img: safetyServicesImg,
     repoLink: "",
-    LiveLink: "http://safetyservices.srv.br",
+    liveLink: "http://www.safetyservices.srv.br",
     figmaLink: "",
     galleryImages: [safetyDevices, safetyScreens],
     role: {
@@ -78,7 +78,7 @@ export const projectsData = [
     },
     img: InteligenciaMunicipalImg,
     repoLink: "",
-    LiveLink: "https://inteligenciamunicipal.com.br",
+    liveLink: "https://inteligenciamunicipal.com.br",
     figmaLink: "",
     galleryImages: [intmDevices, intmScreens],
     role: {
@@ -156,7 +156,7 @@ export const projectsData = [
     repoLink: "",
     figmaLink:
       "https://www.figma.com/proto/AJzEZUenQGIkFsFPvbqtuF/Pouco-Prazo?node-id=616-311&p=f&t=SP5KgM578XMdGwqN-0&scaling=scale-down&content-scaling=responsive&page-id=1669%3A162202",
-    LiveLink: "",
+    liveLink: "",
     galleryImages: [poucoprazoDevices, poucoprazoScreens],
     role: {
       pt: "Arquiteta, Designer & Developer",
@@ -194,7 +194,7 @@ export const projectsData = [
     },
     img: missaoImg,
     repoLink: "",
-    LiveLink: "",
+    liveLink: "",
     figmaLink: "",
     galleryImages: [missaoDevices, missaoScreens],
     role: {
@@ -232,7 +232,7 @@ export const projectsData = [
     },
     img: cityCashImg,
     repoLink: "",
-    LiveLink: "",
+    liveLink: "",
     figmaLink: "",
     galleryImages: [citycashDevices, citycashScreens],
     role: {
@@ -270,7 +270,7 @@ export const projectsData = [
     },
     img: portfolioUiImg,
     repoLink: "https://github.com/RaianaFernandez/Portfolio",
-    LiveLink: "",
+    liveLink: "",
     figmaLink: "",
     galleryImages: [portfolioDevices, portfolioScreens],
     role: {
@@ -316,7 +316,7 @@ export const projectsData = [
     },
     img: safetyServicesImg,
     repoLink: "",
-    LiveLink: "https://www.safetyservices.srv.br",
+    liveLink: "https://www.safetyservices.srv.br",
     figmaLink: "",
     role: {
       pt: "Arquiteta, Designer & Developer",
@@ -361,7 +361,7 @@ export const projectsData = [
     },
     img: designImg,
     repoLink: "https://github.com/seu-usuario/portfolio",
-    LiveLink: "",
+    liveLink: "",
     figmaLink: "",
     role: {
       pt: "Arquiteta, Designer & Developer",
@@ -406,7 +406,7 @@ export const projectsData = [
     },
     img: nscTvImg,
     repoLink: "https://github.com/seu-usuario/portfolio",
-    LiveLink: "",
+    liveLink: "",
     figmaLink: "",
     role: {
       pt: "Arquiteta, Designer & Developer",

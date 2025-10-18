@@ -7,7 +7,7 @@ function Footer() {
   return (
     <section
       id="contact"
-      className="p-4 sm:p-6 lg:p-8 w-full min-h-[300px] bg-dark-bg flex justify-around items-center"
+      className="p-4 sm:p-6 lg:p-8 w-full min-h-[300px] bg-dark-bg flex justify-around items-center flex-wrap"
     >
       <img className="w-[80px]" src={logo} alt="Raiana Fernandez" />
       <nav className="text-sm flex justify-start gap-10">

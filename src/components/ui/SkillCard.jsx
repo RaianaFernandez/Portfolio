@@ -1,6 +1,6 @@
 function SkillsCard({ icon, skills }) {
   return (
-    <div className="p-8 rounded-2xl w-1/4 min-w-[230px] border border-white-700 flex flex-col aspect-[1.11]">
+    <div className="p-8 rounded-2xl w-1/4 min-w-[220px] sm:min-w-[230px] border border-white-700 flex flex-col aspect-[1.11]">
       <div className="text-neon-blue text-[2.50rem]">{icon}</div>
       <ul className="grow flex flex-col justify-end">
         {skills.map((skill, index) => (
