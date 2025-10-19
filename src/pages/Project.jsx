@@ -2,28 +2,21 @@ import React from "react";
 import { useContext } from "react";
 import { LanguageContext } from "../context/LanguageContext";
 import { useParams, useNavigate, Link } from "react-router-dom";
+// eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
 import { projectsData } from "../data/projectsData.jsx";
 import { FaGithub, FaFigma } from "react-icons/fa";
 import { IoLink } from "react-icons/io5";
 
-// A prop 'isModal' será passada pelo App.jsx para nos dizer como renderizar.
-// Definimos um valor padrão de 'false'.
 function Project({ isModal = false }) {
-  // 1. LÊ O URL: O hook 'useParams' pega no ':slug' da nossa rota.
-  // Se o URL for /project/personal-portfolio, o slug será 'personal-portfolio'.
   const { slug } = useParams();
 
-  // Hook para nos permitir navegar (ex: fechar o modal)
   const navigate = useNavigate();
 
-  // Pega no idioma atual do nosso contexto
   const { translations, language } = useContext(LanguageContext);
 
-  // 2. ENCONTRA O PROJETO: Procuramos no nosso array de dados pelo projeto cujo 'slug' corresponde ao do URL.
   const project = projectsData.find((p) => p.slug === slug);
 
-  // 3. TRATAMENTO DE ERRO: Se o URL for inválido e o projeto não for encontrado, mostramos uma mensagem.
   if (!project) {
     return (
       <div className="text-white text-center p-10">
@@ -39,7 +32,6 @@ function Project({ isModal = false }) {
   }
 
   // --- O CONTEÚDO DO ESTUDO DE CASO ---
-  // Criamos uma variável para o conteúdo para podermos reutilizá-la tanto no modal quanto na página.
   const projectContent = (
     <div className="flex flex-col gap-8">
       {/* --- CABEÇALHO --- */}
@@ -108,11 +100,10 @@ function Project({ isModal = false }) {
           )}
         </div>
       </div>
-      {/* --- IMAGEM PRINCIPAL --- */}
-      {/* Mostra a primeira imagem da galeria como imagem principal */}
-      <div className="w-full flex gap-4">
+      {/* --- IMAGENS --- */}
+      <div className="w-full flex-col sm:flex-row flex gap-4">
         {project.galleryImages && project.galleryImages[0] && (
-          <div className="w-[48%] aspect-video object-cover rounded-lg shadow-lg overflow-hidden">
+          <div className="w-full sm:w-[48%] aspect-video object-cover rounded-lg shadow-lg overflow-hidden">
             <img
               className="w-full hover:scale-130 transition-all duration-500ms"
               src={project.galleryImages[0]}
@@ -120,7 +111,7 @@ function Project({ isModal = false }) {
             />
           </div>
         )}
-        <div className="w-[48%] aspect-video object-cover rounded-lg shadow-lg overflow-hidden">
+        <div className="w-full sm:w-[48%] aspect-video object-cover rounded-lg shadow-lg overflow-hidden">
           {project.galleryImages && project.galleryImages[1] && (
             <img
               src={project.galleryImages[1]}
@@ -131,7 +122,6 @@ function Project({ isModal = false }) {
         </div>
       </div>
       {/* --- A HISTÓRIA DO PROJETO --- */}
-      {/* Usamos as classes 'prose' do Tailwind para uma tipografia bonita e automática */}
       <div className="prose prose-invert max-w-none text-gray-300">
         {project.objective && (
           <>
@@ -149,7 +139,6 @@ function Project({ isModal = false }) {
             </h2>
             <p className="text-sm font-light">
               {project.process[language].split("\n").map((line, index) => (
-                // Usar React.Fragment é um pouco mais limpo que <span> aqui
                 <React.Fragment key={index}>
                   {line}
 
@@ -174,7 +163,6 @@ function Project({ isModal = false }) {
     </div>
   );
 
-  // 4. SE FOR UM MODAL, RENDERIZA A ESTRUTURA DO MODAL
   if (isModal) {
     return (
       <AnimatePresence>

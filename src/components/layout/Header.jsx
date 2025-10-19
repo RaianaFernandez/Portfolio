@@ -9,8 +9,8 @@ function Header() {
 
   return (
     <div className="w-full flex justify-between items-center">
-      <img className="w-[70px]" src={logo} alt="Raiana Fernandez" />
-      <nav className="text-sm font-medium flex justify-start gap-4 lg:gap-10 sm:gap-6">
+      <img className="w-[40px] sm:w-[70px]" src={logo} alt="Raiana Fernandez" />
+      <nav className="text-[12px] sm:text-sm font-medium flex justify-start items-center gap-4 lg:gap-10 sm:gap-6">
         <a
           href="#about"
           className="relative 
@@ -25,7 +25,8 @@ function Header() {
           after:h-0.5 
           after:bg-neon-blue 
           after:transition-all 
-          after:duration-300"
+          after:duration-300
+          sm:text-base"
         >
           {translations[language].navLink[1]}
         </a>
@@ -101,15 +102,15 @@ function Header() {
         >
           {translations[language].navLink[5]}
         </a>
-        <div className="w-full flex gap-2 justify-center">
+        <div className="w-full flex flex-col sm:flex-row gap-2 justify-center">
           <div
-            className="w-[25px] h-[25px] rounded-full cursor-pointer"
+            className="w-[20px] sm:w-[25px] aspect-square rounded-full cursor-pointer"
             onClick={() => setLanguage("pt")}
           >
             <img src={flagBr} alt="Português" />
           </div>
           <div
-            className="w-[25px] h-[25px] rounded-full cursor-pointer"
+            className="w-[20px] sm:w-[25px] aspect-square rounded-full cursor-pointer"
             onClick={() => setLanguage("en")}
           >
             <img src={flagEng} alt="English" />

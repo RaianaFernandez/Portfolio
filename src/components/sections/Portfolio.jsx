@@ -19,7 +19,7 @@ function Portfolio() {
     >
       <h1 className=" p-4 sm:p-6 lg:p-8 font-medium text-3xl">
         {translations[language].Portfolio["title"]}
-        <span className="text-neon-blue">
+        <span className="text-neon-blue pl-2">
           {translations[language].Portfolio["titleBlue"]}
         </span>
       </h1>
