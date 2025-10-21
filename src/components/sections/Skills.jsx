@@ -5,10 +5,20 @@ import { FaArrowDownLong } from "react-icons/fa6";
 import { skillsData } from "../../data/skillsData.jsx";
 import SkillsCard from "../ui/SkillCard.jsx";
 import CoreSkills from "../ui/CoreSkills";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1, // A MÁGICA: Atraso de 0.1s entre cada filho
+    },
+  },
+};
 function Skills() {
   const { translations, language } = useContext(LanguageContext);
+
   return (
     <motion.section
       id="skills"
@@ -46,7 +56,13 @@ function Skills() {
         </div>
       </div>
       <div className="w-full flex flex-col items-center sm:items-stretch sm:flex-row flex-wrap">
-        <div className="min-w-[500px] flex w-2/3 flex-wrap gap-3 sm:gap-6 mb-10 sm:mb-0">
+        <motion.div
+          className="min-w-[500px] flex w-2/3 flex-wrap gap-3 sm:gap-6 mb-10 sm:mb-0"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           {skillsData.map((card) => (
             <SkillsCard
               key={card.id}
@@ -54,7 +70,7 @@ function Skills() {
               skills={card.skills[language]}
             />
           ))}
-        </div>
+        </motion.div>
         <div className="lg:w-1/3 pl-12 min-w-[250px]">
           <CoreSkills />
         </div>

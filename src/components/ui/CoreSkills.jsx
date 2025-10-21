@@ -1,5 +1,8 @@
 import { useContext } from "react";
-import { LanguageContext } from "../../context/LanguageContext"; // ajuste o caminho
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
+import { LanguageContext } from "../../context/LanguageContext";
+import React from "react";
 
 function CoreSkills() {
   const { translations, language } = useContext(LanguageContext);
@@ -11,23 +14,46 @@ function CoreSkills() {
         {translations[language].coreSkills.title}
       </p>
 
-      <ul
-        className="relative
-      flex flex-col justify-between grow // <-- AS MUDANÇAS ESTÃO AQUI
-      before:absolute 
-      before:left-[3px] 
-      before:top-5 
-      before:h-[93%]
-      before:w-px 
-      before:bg-neon-blue 
-      before:opacity-30"
-      >
+      {/* A UL é um container normal. A linha é um div estático. */}
+      <ul className="relative flex flex-col justify-between grow">
+        <motion.div
+          className="absolute left-[3.5px] top-3 bottom-3 w-px bg-neon-blue origin-top"
+          initial={{ scaleY: 0 }}
+          whileInView={{ scaleY: 1 }}
+          transition={{ duration: 1.25, ease: "linear" }}
+          viewport={{ once: true }}
+        />
+
         {features.map((feature, index) => (
+          // A 'LI' AGORA É ESTÁTICA. É APENAS A "MOLDURA".
           <li key={index} className="relative pl-8 py-2 sm:py-0">
-            {/* O Círculo */}
-            <span className="absolute left-0 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-neon-blue"></span>
-            {/* O Texto */}
-            <span className="text-white text-lg">{feature}</span>
+            {/* O CÍRCULO: Tem a sua própria animação de whileInView */}
+            <motion.span
+              className="absolute left-0 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-neon-blue"
+              initial={{ opacity: 0, scale: 0.0 }} // Começa invisível e um pouco menor
+              whileInView={{ opacity: 1, scale: 1 }} // Anima para visível e no tamanho normal
+              transition={{
+                duration: 0.2,
+                ease: "linear",
+                delay: index * 0.2, // O MESMO atraso da cascata
+              }}
+              viewport={{ once: true }}
+            ></motion.span>
+
+            {/* O TEXTO: Tem a sua própria animação de whileInView */}
+            <motion.span
+              className="text-white text-lg block origin-left"
+              initial={{ opacity: 0, scale: 0.9 }} // Começa invisível e um pouco menor
+              whileInView={{ opacity: 1, scale: 1 }} // Anima para visível e no tamanho normal
+              transition={{
+                duration: 0.2,
+                ease: "linear",
+                delay: index * 0.2, // O MESMO atraso da cascata
+              }}
+              viewport={{ once: true }}
+            >
+              {feature}
+            </motion.span>
           </li>
         ))}
       </ul>
