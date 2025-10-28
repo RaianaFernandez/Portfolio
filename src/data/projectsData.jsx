@@ -3,6 +3,7 @@ import InteligenciaMunicipalImg from "../assets/InteligenciaMunicipalUi.png";
 import poupitImg from "../assets/poupitUi.png";
 import missaoImg from "../assets/missaoUi.png";
 import poucoPrazoImg from "../assets/poucoprazoUi.png";
+import thiagoImg from "../assets/thiagofernandezUi.png";
 import cityCashImg from "../assets/citycashUi.png";
 import safetyServicesImg from "../assets/safetyServicesUI.png";
 import nscTvImg from "../assets/NSCTv.png";
@@ -17,13 +18,15 @@ import citycashDevices from "../assets/projectImages/citycash-01.png";
 import citycashScreens from "../assets/projectImages/citycash-02.webp";
 import poucoprazoDevices from "../assets/projectImages/poucoprazo-01.png";
 import poucoprazoScreens from "../assets/projectImages/poucoprazo-02.png";
+import thiagoDevices from "../assets/projectImages/thiagofernandez-01.png";
+import thiagoScreens from "../assets/projectImages/thiagofernandez-02.png";
 import safetyDevices from "../assets/projectImages/safety-01.png";
 import safetyScreens from "../assets/projectImages/safety-02.png";
 import portfolioDevices from "../assets/projectImages/portfolio-01.png";
 import portfolioScreens from "../assets/projectImages/portfolio-02.png";
 export const projectsData = [
   {
-    id: 10,
+    id: 1,
     category: "portfolio",
     slug: "SafetyServices",
     title: {
@@ -61,7 +64,7 @@ export const projectsData = [
     },
   },
   {
-    id: 1,
+    id: 2,
     category: "portfolio",
     slug: "InteligênciaMunicipal",
     title: {
@@ -73,8 +76,20 @@ export const projectsData = [
       en: ["Inteligência Municipal"],
     },
     tools: {
-      pt: ["PHP+AJAX", "Js+HTML/CSS", "MySQL", "ETL & Integração de Dados"],
-      en: ["PHP+AJAX", "Js+HTML/CSS", "MySQL", "ETL & Data Integration"],
+      pt: [
+        "PHP+AJAX",
+        "JS+HTML/CSS",
+        "SaSS",
+        "MySQL",
+        "ETL & Integração de Dados",
+      ],
+      en: [
+        "PHP+AJAX",
+        "JS+HTML/CSS",
+        "SaSS",
+        "MySQL",
+        "ETL & Data Integration",
+      ],
     },
     img: InteligenciaMunicipalImg,
     repoLink: "",
@@ -99,7 +114,7 @@ export const projectsData = [
     },
   },
   {
-    id: 2,
+    id: 3,
     category: "portfolio",
     slug: "Poupit",
     title: {
@@ -137,7 +152,7 @@ export const projectsData = [
     },
   },
   {
-    id: 3,
+    id: 4,
     category: "portfolio",
     slug: "PoucoPrazo",
     title: {
@@ -173,6 +188,58 @@ export const projectsData = [
     challenges: {
       pt: "Este projeto foi a minha primeira imersão profissional num ambiente React. Embora o meu contrato tenha sido focado na entrega do sistema de design no Figma, a oportunidade de estudar a base de código e de receber mentoria direta do desenvolvedor principal do projeto foi de um valor inestimável. Esta imersão forneceu-me uma compreensão fundamental da arquitetura baseada em componentes, do fluxo de dados e das melhores práticas numa aplicação real. Esta experiência solidificou as minhas competências avançadas em Figma e, mais importante, serviu como o gatilho que me motivou a aprofundar os meus estudos para me tornar uma desenvolvedora React.",
       en: "This project was my first professional immersion into a React environment. While my contract focused on delivering the complete Figma design system, the opportunity to study the codebase and receive direct mentorship from the project's lead developer was invaluable. This exposure provided me with a foundational understanding of component-based architecture, data flow, and best practices in a real-world application. This experience solidified my advanced skills in Figma and, most importantly, served as the catalyst that sparked my deep dive into becoming a React developer.",
+    },
+  },
+  {
+    id: 5,
+    category: "portfolio",
+    slug: "ThiagoFernandez",
+    title: {
+      pt: ["Plataforma para Imobiliária"],
+      en: ["End-to-End Real State Plataform"],
+    },
+    subtitle: {
+      pt: ["Thiago Fernandez"],
+      en: ["Thiago Fernandez"],
+    },
+    tools: {
+      pt: [
+        "PHP POO",
+        "AJAX",
+        "MySQL",
+        "JavaScript",
+        "HTML+CSS",
+        "UI/UX Design",
+      ],
+      en: [
+        "PHP POO",
+        "AJAX",
+        "MySQL",
+        "JavaScript",
+        "HTML+CSS",
+        "UI/UX Design",
+      ],
+    },
+    img: thiagoImg,
+    repoLink: "",
+    figmaLink: "",
+    liveLink: "https://thiagofernandezimoveis.com.br",
+    galleryImages: [thiagoDevices, thiagoScreens],
+    role: {
+      pt: "Desenvolvedora Full-Stack, Branding e UI/UX designer, Arquiteta de banco de dados e software",
+      en: "Full-Stack Developer, UI/UX and Brand Designer, Database and Software Architect",
+    },
+    objective: {
+      pt: "Projetar e construir uma plataforma digital completa do zero para uma nova imobiliária que não possuía nenhuma presença online anterior. A solução precisava ser uma ferramenta amigável tanto para potenciais compradores (o site público) quanto para o administrador da agência sem conhecimento técnico (o painel de controle), tudo isso respeitando um orçamento e um cronograma rigorosos.",
+      en: "To design and build a complete zero-to-one digital platform for a new real estate agency that had no prior online presence. The solution needed to be a user-friendly tool for both potential home buyers (the public site) and the non-technical agency administrator (the backend panel), all while adhering to a strict budget and timeline.",
+    },
+    process: {
+      pt: "Este foi um projeto end-to-end completo, gerenciado e executado inteiramente por mim.\n\nDescoberta e Branding: Iniciei com um briefing detalhado com o cliente para entender as necessidades do negócio, o público-alvo e os tipos de imóveis. A partir disso, criei a primeira identidade de marca da empresa, incluindo o logotipo e o guia de estilo visual, garantindo que a estética fosse limpa, moderna e acessível ao mercado-alvo de imóveis populares.\n\nArquitetura e UX Design: Projetei toda a arquitetura do banco de dados do zero usando MySQL. Para a experiência do usuário, mapeei o fluxo de navegação tanto para o site público quanto para o painel administrativo. As principais decisões de UX incluíram a criação de filtros de busca intuitivos para os visitantes e o desenvolvimento de um backend extremamente simples e focado em tarefas para um administrador sem conhecimento técnico.\n\nDesenvolvimento Full-Stack: Construí a plataforma completa usando um backend em PHP e um front-end personalizado com HTML, CSS e JavaScript. Isso incluiu o desenvolvimento do sistema de login seguro, a geração dinâmica de páginas de imóveis, sliders de destaque e todas as funcionalidades CRUD (Criar, Ler, Atualizar, Excluir) dentro do painel de controle administrativo.\nImplantação: Fui responsável pela etapa final do projeto, que incluiu a seleção de um plano de hospedagem compatível e acessível, o registro do domínio, a configuração do servidor e DNS, e a publicação bem-sucedida do site.",
+      en: "This was a comprehensive end-to-end project, managed and executed entirely by me. \n\nDiscovery and Branding: I began with a detailed client briefing to understand the business needs, target audience, and property types. From this, I created the company's first-ever brand identity, including the logo and visual style guide, ensuring the aesthetic was clean, modern, and accessible to the target market of popular housing.\n\nArchitecture and UX Design: I designed the complete database architecture from scratch using MySQL. For the user experience, I mapped out the user flow for both the public-facing site and the admin panel. Key UX decisions included creating intuitive search filters for visitors and designing an extremely simple, task-oriented backend for a non-technical administrator.\nFull-Stack Implementation: I built the entire platform using a PHP backend and a custom HTML, CSS, and JavaScript front-end. This included developing the secure login system, the dynamic property page generation, featured property sliders, and all CRUD (Create, Read, Update, Delete) functionalities within the admin control panel.\n\nDeployment: I handled the final stage of the project, which included selecting a compatible and affordable hosting plan, registering the domain, configuring the server and DNS, and successfully deploying the live website.",
+    },
+    challenges: {
+      pt: "Este projeto foi um exercício valioso no equilíbrio entre as necessidades do usuário e a execução técnica. Os principais desafios incluíram a construção de um painel administrativo extremamente intuitivo para um usuário não técnico e, ao mesmo tempo, a implementação de um slider de fotos complexo e responsivo, o que aprimorou minhas habilidades tanto em design centrado no usuário quanto em desenvolvimento front-end. Essa experiência reforçou uma lição crucial em estratégia de produto: a solução de maior sucesso é aquela que não apenas funciona perfeitamente, mas também se alinha diretamente com o conforto e a capacidade operacional de longo prazo do cliente.",
+      en: "This project was a valuable exercise in balancing user needs with technical execution. Key challenges included building an extremely intuitive admin panel for a non-technical user while also implementing a complex, responsive photo slider, which honed my skills in both user-centered design and front-end development. This experience reinforced a crucial lesson in product strategy: the most successful solution is one that not only functions perfectly but also aligns directly with the client's long-term comfort and operational capabilities.",
     },
   },
   {
@@ -252,7 +319,7 @@ export const projectsData = [
     },
   },
   {
-    id: 6,
+    id: 7,
     category: "portfolio",
     slug: "MyPortfolio",
     title: {
@@ -290,7 +357,7 @@ export const projectsData = [
     },
   },
   {
-    id: 7,
+    id: 8,
     category: "jobs",
     slug: "SafetyServices",
     title: {
@@ -335,7 +402,7 @@ export const projectsData = [
     },
   },
   {
-    id: 8,
+    id: 9,
     category: "jobs",
     slug: "",
     title: {
